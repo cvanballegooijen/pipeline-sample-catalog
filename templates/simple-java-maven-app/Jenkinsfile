@@ -7,9 +7,29 @@ pipeline {
                 git credentialsId: "${github_creds}" , url: "${github_repo}" 
             }
         }
+        stage('Code Quality Assessment') {
+            steps {
+                echo 'Code Quality Assessment step'
+            }
+        }
+        stage('Static Application Security step') {
+            steps {
+                echo 'Static Application Security step'
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+        stage('Software Composition Analysis step') {
+            steps {
+                echo 'Software Composition Analysis step'
+            }
+        }            
+        stage('Image Vulnerability Assessment step') {
+            steps {
+                echo 'Image Vulnerability Assessment step'
             }
         }
     }
