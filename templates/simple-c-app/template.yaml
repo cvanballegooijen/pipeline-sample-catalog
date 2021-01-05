@@ -1,7 +1,7 @@
 version: 1
 type: pipeline-template
 
-name: C/C++ cmake App Pipeline Job
+name: C/C++ cmake App
 description: Simple C/C++ App With cmake
 parameters:
   - name: emailRecipient
